@@ -33,6 +33,7 @@
         <section class="item-label2">
             <label id="lbl_judul" for="txt_judul">
                 Judul Buku :
+                git
             </label>
         </section>
         <section class="item-input2">
@@ -84,7 +85,7 @@
         // buat fungsi untuk refresh
         function setRefresh()
         {
-            location.href='<?php echo site_url("Buku/addBuku"); ?>'
+            location.href='<?php echo site_url("buku/addbuku"); ?>'
 
        
         }
@@ -126,7 +127,7 @@
             const judul = (txt_jenis.value === "") ?
             [
                 err_judul.style.display = 'unset',
-                err_judul.innerHTML = "Judul Buku Harus Diisi !",
+                err_judul.innerHTML = "Judul buku Harus Diisi !",
                 lbl_judul.style.color = "#FF0000",
                 txt_judul.style.borderColor = "#FF0000",            
             ]
@@ -141,7 +142,7 @@
             const jenis = (cbo_jenis.selectedIndex === 0) ?
             [
                 err_jenis.style.display = 'unset',
-                err_jenis.innerHTML = "Jenis Buku Harus Dipilih !",
+                err_jenis.innerHTML = "Jenis buku Harus Dipilih !",
                 lbl_jenis.style.color = "#FF0000",
                 cbo_jenis.style.borderColor = "#FF0000",            
             ]
@@ -171,7 +172,7 @@
             form.append("judul",judul);
 
             // proses kirim data ke controller
-            fetch('<?php echo site_url("Buku/setSave"); ?>',{
+            fetch('<?php echo site_url("buku/setSave"); ?>',{
                 method: "POST",
                 body: form
             })

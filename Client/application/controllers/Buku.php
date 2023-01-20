@@ -38,7 +38,7 @@ class Buku extends CI_Controller
        $this->load->view('en_buku');
    }
 
-   // buat fungsi untuk simpan data mahasiswa
+   // buat fungsi untuk simpan data buku
    function setSave()
    {
        // baca nilai dari fetch

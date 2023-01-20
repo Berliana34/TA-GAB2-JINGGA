@@ -93,7 +93,7 @@
         // buat fungsi untuk refresh
         function setRefresh()
         {
-            location.href='<?php echo site_url("Buku/updateBuku"); ?>'+'/'+txt_id.value
+            location.href='<?php echo site_url("buku/updatebuku"); ?>'+'/'+txt_id.value
         }
 
         // buat event untuk "btn_ubah"
@@ -178,7 +178,7 @@
 
             try {
                 // kirim data ke controller
-                let response = await fetch('<?php echo site_url("Buku/setUpdate"); ?>',{
+                let response = await fetch('<?php echo site_url("buku/setUpdate"); ?>',{
                     method: "POST",
                     body: form
                 });
@@ -198,7 +198,7 @@
             
             
     //         // proses kirim data ke controller
-    //         fetch('<?php echo site_url("Buku/setSave"); ?>',{
+    //         fetch('<?php echo site_url("buku/setSave"); ?>',{
     //             method: "POST",
     //             body: form
     //         })
