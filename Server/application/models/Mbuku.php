@@ -23,6 +23,16 @@ class Mbuku extends CI_Model {
 
     }
 
+	   // function get_data($username)
+    // {
+    //     $this->db->select("username,key");
+    //     $this->db->from("tb_auth");
+    //     $this->db->where("username = '$username'");
+    //     $query = $this->db->get()->result();
+
+    //     return $query;
+    // }
+	
     //buat fungsi untuk hapus data
     function delete_data($token)
     {
